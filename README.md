@@ -1,10 +1,16 @@
 # Weak-to-Strong Generalization with In-Context Learning
 
+<a href="https://colab.research.google.com/github/prashantkul/weak-to-strong-gen/blob/main/Prashant_Kulkarni_final_icl_w2s.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 This project investigates how strong language models perform when learning from weak supervision via in-context learning, and how metacognitive interventions affect this robustness.
 
 **GitHub Repository**: https://github.com/prashantkul/weak-to-strong-gen
 
 ## Quick Start
+
+**🚀 Fastest way**: Click the "Open in Colab" badge above to run experiments directly in your browser!
 
 ```bash
 # Clone repository
