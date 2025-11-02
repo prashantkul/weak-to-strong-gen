@@ -140,6 +140,7 @@ async def run_baseline_sweep(
         print(pgr)
 
     # Save if requested
+    experiment_path = None
     if save_results:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         exp_id = result_manager.create_experiment_id(
@@ -169,12 +170,14 @@ async def run_baseline_sweep(
             weak_labels=weak_labels
         )
 
+        experiment_path = f"results/{exp_id}/experiment.json"
         print(f"\n✓ Results saved to: results/{exp_id}/")
 
     return {
         "all_results": all_results,
         "pgr_results": pgr_results,
         "weak_labels": weak_labels,
+        "experiment_path": experiment_path,
         "metadata": {
             "weak_model": config.weak_model,
             "strong_model": config.strong_model,
@@ -306,6 +309,7 @@ async def run_disclaimer_sweep(
         print(f"  Change:         {pgr - baseline_pgr:+.3f}")
 
     # Save if requested
+    experiment_path = None
     if save_results:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         exp_id = result_manager.create_experiment_id(
@@ -335,12 +339,14 @@ async def run_disclaimer_sweep(
             weak_labels=weak_labels
         )
 
+        experiment_path = f"results/{exp_id}/experiment.json"
         print(f"\n✓ Results saved to: results/{exp_id}/")
 
     return {
         "all_results": all_results,
         "pgr_results": disclaimer_pgr_results,
-        "baseline_pgr": baseline_pgr_metrics
+        "baseline_pgr": baseline_pgr_metrics,
+        "experiment_path": experiment_path
     }
 
 
@@ -487,6 +493,7 @@ async def run_cot_sweep(
         print(f"  Change:       {pgr - baseline_pgr:+.3f}")
 
     # Save if requested
+    experiment_path = None
     if save_results:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         exp_id = result_manager.create_experiment_id(
@@ -516,10 +523,12 @@ async def run_cot_sweep(
             weak_labels=weak_cot_labels
         )
 
+        experiment_path = f"results/{exp_id}/experiment.json"
         print(f"\n✓ Results saved to: results/{exp_id}/")
 
     return {
         "all_results": all_results,
         "pgr_results": cot_pgr_results,
-        "baseline_pgr": baseline_pgr_metrics
+        "baseline_pgr": baseline_pgr_metrics,
+        "experiment_path": experiment_path
     }
