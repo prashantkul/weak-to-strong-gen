@@ -2,6 +2,26 @@
 
 This project investigates how strong language models perform when learning from weak supervision via in-context learning, and how metacognitive interventions affect this robustness.
 
+**GitHub Repository**: https://github.com/prashantkul/weak-to-strong-gen
+
+## Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/prashantkul/weak-to-strong-gen.git
+cd weak-to-strong-gen
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up API keys (create .env file)
+cp .env.example .env
+# Edit .env and add your OpenRouter API keys
+
+# Run experiments via Jupyter notebook
+jupyter notebook Prashant_Kulkarni_final_icl_w2s.ipynb
+```
+
 ## Overview
 
 **Research Question**: How do large language models perform when learning from few-shot examples labeled by weaker models, and how do metacognitive interventions (disclaimer, chain-of-thought) affect this robustness?

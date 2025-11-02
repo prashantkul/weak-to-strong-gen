@@ -8,8 +8,8 @@ This guide explains how to use this codebase from a git repository in Jupyter no
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/astra.git
-cd astra
+git clone https://github.com/prashantkul/weak-to-strong-gen.git
+cd weak-to-strong-gen
 
 # Create conda environment
 conda create -n astra python=3.10
