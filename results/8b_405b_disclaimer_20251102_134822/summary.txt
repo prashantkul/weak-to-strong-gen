@@ -1,0 +1,41 @@
+======================================================================
+EXPERIMENT SUMMARY
+======================================================================
+
+Experiment ID: 8b_405b_disclaimer_20251102_134822
+Timestamp: 20251102_134822
+Weak Model: meta-llama/llama-3.1-8b-instruct
+Strong Model: meta-llama/llama-3.1-405b-instruct
+Test Size: 200
+K Values: [0, 2, 5, 10]
+Temperature: 0.0
+Seed: 42
+
+======================================================================
+RESULTS BY K
+======================================================================
+
+K = 0
+  Weak Baseline:  58.50%
+  Strong + Gold:  86.00%
+  Strong + Weak:  85.00%
+  PGR:            0.964 (96.4%)
+
+K = 2
+  Weak Baseline:  58.50%
+  Strong + Gold:  90.00%
+  Strong + Weak:  86.50%
+  PGR:            0.889 (88.9%)
+
+K = 5
+  Weak Baseline:  58.50%
+  Strong + Gold:  90.00%
+  Strong + Weak:  90.50%
+  PGR:            1.016 (101.6%)
+
+K = 10
+  Weak Baseline:  58.50%
+  Strong + Gold:  89.50%
+  Strong + Weak:  88.00%
+  PGR:            0.952 (95.2%)
+

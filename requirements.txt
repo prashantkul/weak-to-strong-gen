@@ -1,0 +1,9 @@
+datasets<4
+safetytooling @ git+https://github.com/safety-research/safety-tooling.git@unpinned_requirements
+numpy>=1.24.0
+pandas>=2.0.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+asyncio-throttle>=1.0.0
+tqdm>=4.65.0
+matplotlib>=3.7.0
